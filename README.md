@@ -26,7 +26,7 @@ Platformatic supports
 1. **Clone the repository:**
 
 ```sh
-git clone https://github.com/iamfortune/Roadmap-Generator.git
+git clone https://github.com/iamfortune/AI-Roadmap-Generator
 cd Roadmap-Generator 
 ```
 
