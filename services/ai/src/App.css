@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  .prose {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  
+  .prose-invert h1,
+  .prose-invert h2,
+  .prose-invert h3,
+  .prose-invert h4,
+  .prose-invert h5,
+  .prose-invert h6 {
+    color: white;
+    font-weight: bold; 
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+  }
+  
+  .prose-invert p {
+    color: white;
+  }
+  
+  .prose-invert a {
+    color: #61b31f;  
+    text-decoration: none;
+  }
+  
+  .prose-invert a:hover {
+    text-decoration: underline;
+  }
+  
+  .prose-invert blockquote {
+    color: #9ca3af; 
+    border-left: 4px solid #4b5563; 
+    padding-left: 1rem;
+  }
+  
+  .prose-invert code {
+    background-color: #1f2937; 
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

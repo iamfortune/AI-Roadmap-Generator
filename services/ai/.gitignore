@@ -1,0 +1,30 @@
+dist
+.DS_Store
+
+# dotenv environment variable files
+.env
+
+# database files
+*.sqlite
+*.sqlite3
+
+# Ignore the fly.toml file
+fly.toml
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# ctags
+tags
+
+# clinicjs
+.clinic/

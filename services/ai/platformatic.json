@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.platformatic.dev/@platformatic/ai-warp/0.4.3.json",
+  "service": {
+    "openapi": true
+  },
+  "watch": true,
+  "showAiWarpHomepage": false,
+  "rateLimiting": {
+    "max": 100,
+    "timeWindow": "1 minute",
+    "maxByClaims": [
+      {
+        "claim": "userType",
+        "claimValue": "premium",
+        "max": 1000 
+      }
+    ]
+  },
+  "plugins": {
+    "paths": [
+      "./plugins",
+      {
+        "path": "./auth",
+        "options": {
+          "GITHUB_OAUTH_CLIENT_ID": "{PLT_GITHUB_OAUTH_CLIENT_ID}",
+          "GITHUB_OAUTH_CLIENT_SECRET": "{PLT_GITHUB_OAUTH_CLIENT_SECRET}"
+        }
+      }
+    ]
+  },
+  "module": "@platformatic/ai-warp",
+  "aiProvider": {
+    "openai": {
+      "model": "gpt-3.5-turbo",
+      "apiKey": "{PLT_AI_API_KEY}"
+    }
+  },
+  "promptDecorators": {
+      "prefix": "You are an expert career advisor specializing in creating detailed and structured developer roadmaps. You will generate a in-depth and comprehensive roadmap for users in markdown format that includes stages, skills, and resources required to progress from a beginner to an advanced developer.\nThe specific roadmap you need to create is: ",
+      "suffix": "Please ensure the roadmap is very detailed, covering key areas such as foundational knowledge, programming languages, frameworks, tools, best practices, and continuous learning strategies."  
+  }
+}
