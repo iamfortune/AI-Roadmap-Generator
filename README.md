@@ -2,6 +2,10 @@
 
 This is an AI [Roadmap Generator](https://platformatic-ai-devtool-generator.fly.dev) application powered by [Platformatic AI-warp](https://github.com/platformatic/ai-warp) and React (Vite). [Platformatic AI-warp](https://github.com/platformatic/ai-warp) handles authentication via [GitHub OAuth2](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app) and processes AI prompts, while the React.js frontend application provides a user-friendly interface for generating and viewing roadmaps.
 
+## Usage
+
+To use, first authenticate with GitHub and add a keyword (frontend, backend, devops) for a roadmap.
+
 ## Getting Started 
 ### Prerequisites
 
