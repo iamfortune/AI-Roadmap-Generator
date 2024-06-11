@@ -10,6 +10,8 @@ dist
 
 # Ignore the fly.toml file
 fly.toml
+fly.yml
+
 
 # Logs
 logs
