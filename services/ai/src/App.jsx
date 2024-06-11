@@ -74,7 +74,7 @@ function App() {
                 onClick={submit}
                 disabled={loading}
               >
-                {loading ? "Loading..." : "Get Roadmap"}
+                {loading ? "Generating..." : "Get Roadmap"}
               </button>
             </div>
             {!loading && response && (
