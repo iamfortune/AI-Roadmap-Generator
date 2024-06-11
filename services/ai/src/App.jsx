@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 function App() {
-  const { prompt, setPrompt, response, setResponse, fetchPrompt, loading } = useFetchPrompt();
+  const { prompt, setPrompt, response, setResponse, fetchPrompt, loading, setLoading } = useFetchPrompt();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
 
@@ -31,7 +31,7 @@ function App() {
     setPrompt(event.target.value);
   };
 
-  const submit = () => handlePromptSubmit(prompt, setResponse);
+  const submit = () => handlePromptSubmit(prompt, setResponse, setLoading);
 
   const handleLogin = () => {
     window.location.href = `${import.meta.env.VITE_AI_URL}/login/github`;

@@ -27,10 +27,11 @@ export const useFetchPrompt = () => {
     }
   }, []);
 
-  return { prompt, setPrompt, response, setResponse, fetchPrompt, loading };
+  return { prompt, setPrompt, response, setResponse, fetchPrompt, loading, setLoading };
 };
 
-export const handlePromptSubmit = async (prompt, setResponse) => {
+export const handlePromptSubmit = async (prompt, setResponse, setLoading) => {
+  setLoading(true);
   try {
     const res = await fetch(`${import.meta.env.VITE_AI_URL}/api/v1/stream`, {
       method: "POST",
@@ -80,6 +81,8 @@ export const handlePromptSubmit = async (prompt, setResponse) => {
   } catch (error) {
     console.error("Failed to fetch data:", error);
     setResponse("Failed to fetch data.");
+  } finally {
+    setLoading(false);
   }
 };
 

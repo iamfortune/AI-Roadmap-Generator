@@ -76,7 +76,6 @@ body {
     justify-content: center;
   }
 
-  /* Add this to your App.css */
 .spinner {
   border: 4px solid rgba(255, 255, 255, 0.3);
   border-left-color: #fff;
