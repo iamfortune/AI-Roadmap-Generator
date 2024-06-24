@@ -18,9 +18,7 @@
     "@fastify/rate-limit": "^9.1.0",
     "@fastify/static": "^7.0.4",
     "fastify-cookie": "^5.7.0",
-    "fastify-passport": "^0.6.0",
     "fastify-plugin": "^4.5.1",
-    "passport-github2": "^0.1.12",
     "platformatic": "^1.44.0",
     "undici": "^6.18.2"
   },
