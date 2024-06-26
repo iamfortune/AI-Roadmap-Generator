@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import Modal from 'react-modal';
-import '../App.css';
+import { useState } from "react";
+import Modal from "react-modal";
+import "../App.css";
 
 const TermsOfService = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -25,25 +25,40 @@ const TermsOfService = () => {
       >
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
-          <p className="mb-4">Welcome to Platformatic AI roadmap generator. By using our service, you agree to the following terms:</p>
-          <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
           <p className="mb-4">
-            By accessing and using our services, you accept and agree to be bound by the terms and provisions of this agreement.
+            Welcome to Platformatic AI roadmap generator. By using our service,
+            you agree to the following terms:
           </p>
-          <h2 className="text-2xl font-semibold mb-4">2. Description of Service</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            1. Acceptance of Terms
+          </h2>
           <p className="mb-4">
-            Our service provides users with access to resources and tools for managing and interacting with AI models.
+            By accessing and using our services, you accept and agree to be
+            bound by the terms and provisions of this agreement.
+          </p>
+          <h2 className="text-2xl font-semibold mb-4">
+            2. Description of Service
+          </h2>
+          <p className="mb-4">
+            Our service provides users with access to resources and tools for
+            managing and interacting with AI models.
           </p>
           <h2 className="text-2xl font-semibold mb-4">3. User Obligations</h2>
           <p className="mb-4">
-            You must provide accurate registration information and keep it up to date. You are responsible for maintaining the confidentiality of your account.
+            You must provide accurate registration information and keep it up to
+            date. You are responsible for maintaining the confidentiality of
+            your account.
           </p>
           <h2 className="text-2xl font-semibold mb-4">4. Termination</h2>
           <p className="mb-4">
-            We reserve the right to terminate or suspend your account at our sole discretion for conduct that we believe violates these terms.
+            We reserve the right to terminate or suspend your account at our
+            sole discretion for conduct that we believe violates these terms.
           </p>
           <p className="mt-8">Last updated: {currentDate}</p>
-          <button onClick={closeModal} className="mt-4 bg-gray-800 text-white py-2 px-4 rounded-lg">
+          <button
+            onClick={closeModal}
+            className="mt-4 bg-gray-800 text-white py-2 px-4 rounded-lg"
+          >
             Close
           </button>
         </div>

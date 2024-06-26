@@ -27,7 +27,15 @@ export const useFetchPrompt = () => {
     }
   }, []);
 
-  return { prompt, setPrompt, response, setResponse, fetchPrompt, loading, setLoading };
+  return {
+    prompt,
+    setPrompt,
+    response,
+    setResponse,
+    fetchPrompt,
+    loading,
+    setLoading,
+  };
 };
 
 export const handlePromptSubmit = async (prompt, setResponse, setLoading) => {

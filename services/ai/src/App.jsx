@@ -5,7 +5,15 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 function App() {
-  const { prompt, setPrompt, response, setResponse, fetchPrompt, loading, setLoading } = useFetchPrompt();
+  const {
+    prompt,
+    setPrompt,
+    response,
+    setResponse,
+    fetchPrompt,
+    loading,
+    setLoading,
+  } = useFetchPrompt();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
 
@@ -15,11 +23,11 @@ function App() {
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
-    const token = query.get('token');
-    const username = query.get('username');
-    const fullname = query.get('fullname');
-    const image = query.get('image');
-    const email = query.get('email');
+    const token = query.get("token");
+    const username = query.get("username");
+    const fullname = query.get("fullname");
+    const image = query.get("image");
+    const email = query.get("email");
 
     if (token) {
       setIsAuthenticated(true);
@@ -42,7 +50,9 @@ function App() {
       <div className="p-6 bg-gray-800 rounded-lg shadow-lg w-full max-w-lg">
         {!isAuthenticated ? (
           <div className="mb-4">
-            <h1 className="text-2xl font-bold mb-2">Platformatic AI Roadmap Generator</h1>
+            <h1 className="text-2xl font-bold mb-2">
+              Platformatic AI Roadmap Generator
+            </h1>
             <button
               className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition duration-200 mb-4"
               onClick={handleLogin}
@@ -53,7 +63,10 @@ function App() {
         ) : (
           <>
             <div className="mb-4">
-              <label className="block text-xl font-bold mb-2" htmlFor="prompt-text">
+              <label
+                className="block text-xl font-bold mb-2"
+                htmlFor="prompt-text"
+              >
                 Platformatic Roadmap Generator
               </label>
             </div>

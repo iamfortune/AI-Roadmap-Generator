@@ -4,7 +4,7 @@
 const { callGHEndpoint } = require("./utils");
 const oauthPlugin = require("@fastify/oauth2");
 
-const CALLBACK_URL = process.env.CALLBACK_URL || 'http://localhost:3042';
+const CALLBACK_URL = process.env.CALLBACK_URL || "http://localhost:3042";
 
 /** @param {import('fastify').FastifyInstance} app */
 module.exports = async function (app, opts) {
@@ -17,7 +17,7 @@ module.exports = async function (app, opts) {
       },
       auth: oauthPlugin.GITHUB_CONFIGURATION,
     },
-    startRedirectPath: "/login/github",
+    startRedirectPath: "/login/github", 
     callbackUri: `${CALLBACK_URL}/login/github/callback`,
     cookie: {
       path: "/",
@@ -42,11 +42,10 @@ module.exports = async function (app, opts) {
         image: githubUser.avatar_url,
         email: githubUser.email,
       };
-      
-      const userToken = Buffer.from(user.email).toString('base64');
 
- 
-      const redirectUrl = `${CALLBACK_URL}?username=${encodeURIComponent(user.username)}&token=${userToken}`;;
+      const userToken = Buffer.from(user.email).toString("base64");
+
+      const redirectUrl = `${CALLBACK_URL}?username=${encodeURIComponent(user.username)}&token=${userToken}`;
       res.redirect(redirectUrl);
     } catch (error) {
       app.log.error(error);
