@@ -43,7 +43,7 @@ module.exports = async function (app, opts) {
         email: githubUser.email,
       };
 
-      const userToken = Buffer.from(user.email).toString("base64");
+      const userToken = Buffer.from(user.username).toString("base64");
 
       const redirectUrl = `${CALLBACK_URL}?username=${encodeURIComponent(user.username)}&token=${userToken}`;
       res.redirect(redirectUrl);
